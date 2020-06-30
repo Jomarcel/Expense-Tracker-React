@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 const TransactionList = () => {
+  // pass the transactions data
+  const context = useContext(GlobalContext);
+  console.log(context);
   return (
     <div>
       <h3>History</h3>
-      <ul id="list" class="list">
-        <li class="minus">
+      <ul className="list">
+        <li className="minus">
           Cash <span>-$400</span>
-          <button class="delete-btn">x</button>
+          <button className="delete-btn">x</button>
         </li>
       </ul>
     </div>
