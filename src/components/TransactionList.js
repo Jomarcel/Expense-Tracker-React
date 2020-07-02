@@ -10,6 +10,7 @@ const TransactionList = () => {
     <div>
       <h3>History</h3>
       <ul className="list">
+        {/*    loop through each transaction object */}
         {transactions.map((transaction) => (
           // console.log(transaction)
           <Transaction key={transaction.id} transaction={transaction} />
